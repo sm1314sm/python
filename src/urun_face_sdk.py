@@ -47,7 +47,6 @@ elif flag == 2:
     image = base64.b64encode(f.read())
     image64 = str(image,'utf-8')
     imageType = "BASE64"
-    #groupIdList = "group_repeat"
     groupIdList = "group_2"
     print("Basic")
     print( client.multiSearch(str(image64), imageType, groupIdList) )
@@ -55,6 +54,5 @@ elif flag == 2:
     options = {}
     options["max_face_num"] = 10
     options["match_threshold"] = 70
-    #options["max_user_num"] = 3
     print("Advanced")
     print( client.multiSearch(str(image64), imageType, groupIdList, options) )
